@@ -1,17 +1,19 @@
-"""Choose your own adventure"""
+"""Choose your own adventure."""
 
 __author__ = "730384411"
 
 from random import randint
 
-points: int = 0
+points: int 
 ram: str = "\U0001F40F"
-player: str = input("What is your name? ")
+player: str 
 
 
 def main() -> None:
+    """Entry function."""
     global points
     global ram
+    points = 0
     greet()
     print("What do you want to do? ")
     print("1: Finish your COMP110 homeowrk ")
@@ -28,15 +30,17 @@ def main() -> None:
 
 
 def greet() -> None: 
+    """Greeting to game."""
     global ram
+    global player
+    print("Welcome to UNC-Chapel Hill!")
     print(f"UNC football is playing Duke tonight but Ramses {ram} has been stolen by Duke! ")
     print("Can you help us get him back! ")
-    global player
-    global points
-    points = points + 1
+    player = input("What is your name? ")
 
 
 def kenan() -> None:
+    """Kenan Stadium Events."""
     global ram
     counter = 0
     print("Welcome to Kenan Stadium. Let's look in the locker room... ")
@@ -68,8 +72,10 @@ def kenan() -> None:
 
 
 def quad(a: int) -> int:
+    """Quad Events."""
     global ram
     global points
+    global player
     print("Welcome to the quad. Let's walk around! ")
     print("Look! It's Sam Howell, let's talk to him. ")
     print("Oh no! To get to Sam, we have to pass Kevin G. ")
@@ -117,6 +123,7 @@ def quad(a: int) -> int:
 
 
 def duke() -> None:
+    """Duke Events."""
     global ram
     global points
     points = points + 3
@@ -132,8 +139,10 @@ def duke() -> None:
 
 
 def field() -> None:
+    """Duke football field events."""
     global ram
     global points 
+    global player
     points = points + 5
     print("How lucky that the gates were unlocked! Let's look around. ")
     print(f"Look! It's Ramses {ram}")
@@ -142,8 +151,10 @@ def field() -> None:
 
 
 def lockerroom() -> None:
+    """Duke lockerroom events."""
     global ram
     global points 
+    global player
     points = points + 5
     print("We made it to the lockerroom. Let's take a look around. ")
     print(f"It doesn't look like Ramses {ram} is here. Do you want to go to the field")
